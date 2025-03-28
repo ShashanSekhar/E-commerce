@@ -1,0 +1,410 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'poppins',sans-serif;
+    /* background: rgb(240, 238, 241); */
+    background: #9575df1c;
+}
+
+h1{
+    font-size: 2.5;
+    font-weight: 700;
+}
+h2{
+    font-size: 1.8;
+    font-weight: 600;
+}
+h3{
+    font-size: 1.4;
+    font-weight: 800;
+}
+h4{
+    font-size: 1.1;
+    font-weight: 600;
+}
+h5{
+    font-size: 1rem;
+    font-weight: 400;
+}
+h6{
+    color: #d3d3d3;
+}
+hr{
+    width: 40px;
+    height: 3px;
+    background-color: rgb(201, 0, 201);
+}
+
+.star{
+    padding: 10px 0;
+}
+.star i{
+    font-size: .8rem;
+    color: rgb(183, 0, 255);
+}
+
+
+button{
+    font-size: 0.8rem;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    background-color: #1d1d1d;
+    color: white;
+    padding: 13px 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+
+
+button:hover{
+    background-color: #3a3833;
+}
+
+
+
+.navbar{
+    font-size: 16px;
+    top: 0;
+    left: 0;
+    box-shadow: 0 5px 10px rgba(116, 41, 202, 0.342);
+  
+}
+
+.navbar-light .navbar-nav .nav-link{
+    font-size: 22px;
+    padding: 0 20px;
+    color: black;
+    transition: 0.3s ease;
+}
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar .nav-item i:hover,
+.navbar-light .navbar-nav .nav-link:active{
+    color: rgb(183, 0, 255);
+}
+
+.navbar .nav-item i{
+    padding: 0 7px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    /* font-weight: 500; */
+    transition: 0.3s ease;
+}
+
+/* Mobile nav */
+.navbar-light .navbar-toggler{
+    border: none;
+    outline: none;
+}
+#bar{
+    font-size: 1.5rem;
+    padding: 7px;
+    cursor: pointer;
+    font-weight: 800;
+    transition: .3s ease;
+    color: black;
+}
+#bar:hover,
+#bar:active{
+    color: white;
+}
+
+
+@media only screen and (max-width: 991px){
+    body > nav > div > button:hover,
+    body > nav > div > button:focus{
+        background-color: rgb(183, 0, 255);
+    }
+    body > nav > div > button:hover #bar,
+    body > nav > div > button:focus #bar{
+        color: white;
+    }
+
+    #navbarSupportedContent > ul{
+        margin: 1rem;
+        justify-content: flex-end;
+        align-items: flex-end;
+        text-align: right;
+    }
+    #navbarSupportedContent > ul > li:nth-child(n) > a{
+        padding: 10px 0;
+        /* //from top and right */
+    }
+}
+
+
+#home{
+    background-attachment: fixed; 
+
+    background-image: url("ecommerse1.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: top  center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#home span{
+    color: rgb(183, 0, 255);
+}
+
+/* this is the brand section background white removal */
+.row img{
+    mix-blend-mode: multiply;
+}
+/*  ................................ */
+
+#new .one img{
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#new .one .details{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.3 ease;
+}
+
+#new .one:hover .details{
+    cursor: pointer;
+    background-color: rgba(183, 0, 255, 0.301);
+}
+
+#new .one .details button{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2a2a2a;
+    background: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid #2a2a2a;
+    padding: 2.5px;
+    transform: translateY(70px);
+    transition: .3s ease;
+}
+#new .one .details button:hover{
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+#new .one:nth-child(1) .details{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+}
+#new .one:nth-child(2) .details{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#new .one:nth-child(3) .details{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: end;
+}
+
+
+/* product */
+
+.product{
+    cursor: pointer;
+    margin-bottom: 2rem;
+
+}
+
+.product img{
+    transition: .3s all;
+    box-shadow: 0 5px 10px gray;
+
+}
+.product:hover img{
+   opacity: 0.7;
+}
+
+
+.product .buy-button{
+    background-color: rgb(200, 80, 255);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 0.3s all;
+}
+
+.product:hover .buy-button{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+#banner{
+    background-image: url("ecommerse1.jpg");
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-position: top 70px center;
+    background-repeat: no-repeat;
+    /* ............................ */
+    background-attachment: fixed; 
+    /* ............................ */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#banner h4{
+     color: #646464;
+}
+#banner h1{
+    color: white;
+}
+#banner button{
+    background-color: rgb(200, 80, 255);
+}
+
+
+
+footer{
+    background-color: #222;
+}
+
+footer h5{
+    color: #d8d8d8;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+footer li{
+    padding-bottom: 4px;
+}
+
+footer li a{
+    font-size: .8rem;
+    color: #999;
+}
+footer li a:hover{
+    color: #d8d8d8;
+}
+
+footer p{
+    color: #999;
+    font-size: .8rem;
+}
+
+footer .copyright a{
+    color: #6a0085;
+    width: 38px;
+    height: 38px;
+    background-color: #fff;
+    display: inline-block;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    margin: 0 5px;
+}
+footer .copyright a:hover{
+    color: #fff;
+    background-color: #6a0085;
+}
+
+.footer-one{
+    color: white;
+}
+
+
+/* cart */
+#cart-container{
+    overflow-x: auto;
+}
+
+#cart-container table{
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+
+#cart-container table thead{
+    font-weight: 700;
+}
+
+#cart-container table thead td{
+    background: rgb(200, 80, 255);
+    color: white;
+    border: none;
+    padding: 6px 0;
+}
+
+#cart-container table td{
+    border: 1px solid #b6b3b3;
+    text-align: center;
+}
+
+#cart-container table td:nth-child(1){
+    width: 100px;
+}
+
+#cart-container table td:nth-child(2),
+#cart-container table td:nth-child(3){
+    width: 200px;
+}
+
+#cart-container table td:nth-child(4),
+#cart-container table td:nth-child(5)
+#cart-container table td:nth-child(6)
+{
+    width: 170px;
+}
+
+#cart-container table tbody img{
+    width: 100%;
+    height: 80px;
+    object-fit: contain;
+}
+
+#cart-container table tbody i{
+    color: #2a2a2a;
+}
+
+#cart-bottom >div{
+    border: 1px solid rgb(151, 151, 151);
+}
+#cart-bottom h5{
+    background: rgb(200, 80, 255);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-weight: 700;
+}
+#cart-bottom h6{
+    color: #585858;
+    font-weight: 750;
+
+}
+
+#cart-bottom div>button{
+    margin: 0 12px 20px 0;
+    display: flex;
+}
